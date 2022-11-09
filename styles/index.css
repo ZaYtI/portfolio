@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap%27');
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+nav a{
+    font-size: 19px;
+    position: relative;
+    color: white;
+}
+
+
+nav a::after{
+    position: absolute;
+    content: "";
+    bottom: -3px ;
+    left: 0;
+    background-color: white;
+    width: 0;
+    height: 3px;
+    transition: all .25s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 100%;
+    border-radius: 2px;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    background-color: #07374a;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    text-transform: uppercase;
+    height: 64px;
+    top: 0;
+}
+.container{
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.element{
+    scroll-snap-align: start;
+    scroll-padding-inline-start: unset;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background-color: #25b79f;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes moove {
+    0%{
+        bottom: 40px; 
+    }
+    50%{
+        bottom: 15px;
+    }
+    100%{
+        bottom: 40px;
+    }
+}
+
+
+.element:nth-child(2n+2){
+    background-color: #07374a;
+}
+
+@keyframes right {
+    0%{
+        transform: translate(-200%);
+    }
+    
+    100%{
+        transform: translate(0);
+    }
+}
+.row{
+    position: absolute;
+    color: #25b79f;
+    left: 50%;
+    bottom: 15px;
+    font-size: 50px;
+    rotate: -90deg;
+    animation: right_absolute .9s ease-in-out,moove .7s infinite;
+}
+
+.second{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.second .row{
+    animation: moove .7s infinite ;
+}
+@keyframes right_absolute {
+    0%{
+        left: -140px;
+    }
+    100%{
+        left: 50%;
+        transform: translate(0,-50%);
+    }
+}
+
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 375%;
+}
+
+.about{
+    height: 1000px;
+    margin-top: 30px;
+}
+
+
+
+.row a{
+    color: #07374a;
+    font-weight: 900;
+}
+
+.second .row a{
+    color: #25b79f;
+}
+
+.second>h2{
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: #25b79f;
+}
+
+#third-slide>h2{
+    text-align: center;
+    padding: 60px;
+    font-size: 30px;
+    color: #07374a;
+}
+#title_first h1{
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+}
+
+#title_first{
+    color: #07374a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: right .9s ease-in-out;
+}
+
+#title_first p{
+    font-size: 30px;
+}
+.about{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.personnal_information{
+    max-width: 50%;
+}
+hr{
+    height: 3px;
+    background-color: white;
+    width: 50%;
+    margin: auto;
+}
+.tools_use{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tools_use li{
+    padding: 5px;
+    font-size: 30px;
+    color: #25b79f;
+}
+
+.personnal_information img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.personnal_information{
+    color: white;
+}
+
+.personnal_information p {
+    margin-bottom: 40px;
+}
+
+.personnal_information .project{
+    padding: 20px;
+    background-color: transparent;
+    text-transform: uppercase;
+    border:2px solid  #25b79f;
+    color: #25b79f;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+
+.personnal_information .project:hover{
+    background-color: #25b79f;
+    border:2px solid #07374a;
+    color: #07374a;
+}
+.third{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.third>h2{
+    width: 100%;
+}
+
+
+.card{
+    min-height: 450px;
+    width: 17%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+    text-align: center;
+    background-color: rgb(243, 243, 101);
+    background-image: url('/images/python.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 15px 15px;
+    transition: all .5s ease-in;
+    background-position: top center;
+    margin-bottom: 100px;
+}
+
+
+.card:nth-child(3){
+    background-image: url('/images/java.png');
+    background-color: rgb(121, 39, 56);
+}
+.card:nth-child(4){
+    background-image: url('/images/php.png');
+    background-color: #07374a;
+}
+.card:nth-child(5){
+    background-image: url('/images/html.png');
+    background-color: crimson;
+}
+.card:hover{
+    background-color: rgb(34, 33, 33);
+}
+.card:hover .content{
+    transform: translateY(-5px);
+    visibility: visible;
+}
+
+.content{
+    visibility: hidden;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transform: translateY(50px);
+    transition: all .5s ease-in;
+}
+
+.btn{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.card .title{
+    text-transform: uppercase;
+}
+
