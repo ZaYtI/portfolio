@@ -273,7 +273,7 @@ hr{
     align-items: flex-end;
     text-align: center;
     background-color: rgb(243, 243, 101);
-    background-image: url('/images/python.png');
+    background-image: url('images/python.png');
     background-size:70%;
     background-repeat: no-repeat;
     border-radius: 15px 15px 15px 15px;
