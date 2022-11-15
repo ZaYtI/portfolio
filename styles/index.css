@@ -63,6 +63,17 @@ nav{
     align-items: center;
     flex-direction: column;
 }
+.element>*{
+    visibility: hidden;
+}
+.element.is-visible > *{
+    animation: right .9s  ease;
+    visibility: visible;
+}
+
+.element.is-visible:nth-child(2)>*:not(.row){
+    animation: left .9s ease;
+}
 
 @keyframes moove {
     0%{
@@ -90,14 +101,13 @@ nav{
         transform: translate(0);
     }
 }
-.row{
-    position: absolute;
-    color: #25b79f;
-    left: 50%;
-    bottom: 15px;
-    font-size: 50px;
-    rotate: -90deg;
-    animation: right_absolute .9s ease-in-out,moove .7s infinite;
+@keyframes left {
+    0%{
+        transform: translate(200%);
+    }
+    100%{
+        transform: translate(0);
+    }
 }
 
 .second{
@@ -111,18 +121,16 @@ nav{
     text-align: center;
 }
 
-.second .row{
+.element .row{
+    position: absolute;
+    color: #25b79f;
+    left: 50%;
+    bottom: 15px;
+    font-size: 50px;
+    rotate: -90deg;
     animation: moove .7s infinite ;
 }
-@keyframes right_absolute {
-    0%{
-        left: -140px;
-    }
-    100%{
-        left: 50%;
-        transform: translate(0,-50%);
-    }
-}
+
 
 .first{
     display: flex;
@@ -172,8 +180,9 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: right .9s ease-in-out;
+    animation:  right .9s ease-in-out;
 }
+
 
 #title_first p{
     font-size: 30px;
@@ -197,6 +206,7 @@ hr{
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .tools_use li{
@@ -228,6 +238,7 @@ hr{
     color: #25b79f;
     font-weight: bold;
     transition: all .5s ease-in-out;
+    display: inline-block;
 }
 
 .personnal_information .project:hover{
@@ -239,7 +250,7 @@ hr{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
     align-content: center;
     flex-direction: row;
     justify-content: space-around;
@@ -253,8 +264,9 @@ hr{
 
 
 .card{
-    min-height: 450px;
-    width: 17%;
+    min-height: 400px;
+    max-width: 300px;
+    flex: 1 0 300px;
     position: relative;
     display: flex;
     overflow: hidden;
@@ -262,10 +274,10 @@ hr{
     text-align: center;
     background-color: rgb(243, 243, 101);
     background-image: url('/images/python.png');
-    background-size: contain;
+    background-size:70%;
     background-repeat: no-repeat;
     border-radius: 15px 15px 15px 15px;
-    transition: all .5s ease-in;
+    transition: all .3s ease-in;
     background-position: top center;
     margin-bottom: 100px;
 }
@@ -285,6 +297,7 @@ hr{
 }
 .card:hover{
     background-color: rgb(34, 33, 33);
+    background-size: 80%;
 }
 .card:hover .content{
     transform: translateY(-5px);
@@ -296,8 +309,8 @@ hr{
     color: white;
     font-weight: bold;
     font-size: 20px;
-    transform: translateY(50px);
-    transition: all .5s ease-in;
+    transform: translateY(150px);
+    transition: all .3s ease-in-out;
 }
 
 .btn{
@@ -312,4 +325,6 @@ hr{
 .card .title{
     text-transform: uppercase;
 }
+
+
 
