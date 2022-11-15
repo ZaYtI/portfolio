@@ -284,15 +284,15 @@ hr{
 
 
 .card:nth-child(3){
-    background-image: url('/images/java.png');
+    background-image: url('images/java.png');
     background-color: rgb(121, 39, 56);
 }
 .card:nth-child(4){
-    background-image: url('/images/php.png');
+    background-image: url('images/php.png');
     background-color: #07374a;
 }
 .card:nth-child(5){
-    background-image: url('/images/html.png');
+    background-image: url('images/html.png');
     background-color: crimson;
 }
 .card:hover{
