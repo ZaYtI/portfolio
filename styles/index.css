@@ -12,6 +12,8 @@ nav a{
     font-size: 19px;
     position: relative;
     color: white;
+    text-decoration: none;
+    padding: 10px 10px;
 }
 
 
@@ -20,7 +22,7 @@ nav a::after{
     content: "";
     bottom: -3px ;
     left: 50%;
-    background-color: white;
+    background-color: #25b79f;
     width: 0;
     height: 3px;
     transition: all .25s ease-in-out;
@@ -35,10 +37,10 @@ nav a:hover::after{
 nav{
     width: 100%;
     position: fixed;
-    background-color: #07374a;
+    background-color: #090A0B;
     font-weight: 700;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-evenly; 
     align-items: center;
     text-transform: uppercase;
     height: 64px;
@@ -50,6 +52,7 @@ nav{
     width: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 .element{
     scroll-snap-align: start;
@@ -57,7 +60,7 @@ nav{
     width: 100%;
     min-height: 100%;
     height: auto;
-    background-color: #25b79f;
+    background-color: #090A0B;
     position: relative;
     display: flex;
     align-items: center;
@@ -87,11 +90,6 @@ nav{
     }
 }
 
-
-.element:nth-child(2n+2){
-    background-color: #07374a;
-}
-
 @keyframes right {
     0%{
         transform: translate(-200%);
@@ -112,9 +110,10 @@ nav{
 
 .second{
     position: relative;
+    background-color: #101012;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: space-evenly;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -123,11 +122,11 @@ nav{
 
 .element .row{
     position: absolute;
-    color: #25b79f;
-    left: 50%;
-    bottom: 15px;
+    color: orange;
+    bottom: 0;
     font-size: 50px;
     rotate: -90deg;
+    transform: calc(-50%,-50%);
     animation: moove .7s infinite ;
 }
 
@@ -135,6 +134,7 @@ nav{
 .first{
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     font-size: 375%;
 }
@@ -147,7 +147,7 @@ nav{
 
 
 .row a{
-    color: #07374a;
+    color: #25b79f;
     font-weight: 900;
 }
 
@@ -167,7 +167,7 @@ nav{
     text-align: center;
     padding: 30px;
     font-size: 30px;
-    color: #07374a;
+    color:#25b79f;
 }
 #title_first h1{
     font-family: 'Dancing Script', cursive;
@@ -175,7 +175,7 @@ nav{
 }
 
 #title_first{
-    color: #07374a;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,6 +185,7 @@ nav{
 
 
 #title_first p{
+    color: #25b79f;
     font-size: 30px;
 }
 .about{
@@ -251,7 +252,7 @@ hr{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    align-content: center;
+    align-content: space-evenly;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -260,44 +261,49 @@ hr{
 
 .third>h2{
     width: 100%;
+    color: #25b79f;
 }
 
 
 .card{
-    min-height: 400px;
+    height: 300px;
+    min-height: 300px;
     max-width: 300px;
     flex: 1 0 300px;
     position: relative;
     display: flex;
-    overflow: hidden;
     align-items: flex-end;
+    overflow: hidden;   
     text-align: center;
-    background-color: rgb(243, 243, 101);
-    background-image: url('../images/python.png');
-    background-size:70%;
+    background-image: url('/images/python.png');
+    background-size:50%;
     background-repeat: no-repeat;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 5px 5px 5px 5px;
     transition: all .3s ease-in;
     background-position: top center;
     margin-bottom: 100px;
+    background-color: #161618;
+    border: 2px solid #25b79f;
+    box-shadow: #25b79f 2.5px 2.5px 2.5px 2.5px;
 }
 
 
 .card:nth-child(3){
-    background-image: url('../images/java.png');
-    background-color: rgb(121, 39, 56);
+    background-image: url('/images/java.png');
 }
 .card:nth-child(4){
-    background-image: url('../images/php.png');
-    background-color: #07374a;
+    background-image: url('/images/php.png');
 }
+
 .card:nth-child(5){
-    background-image: url('../images/html.png');
-    background-color: crimson;
+    background-image: url('/images/html.png');
 }
+
 .card:hover{
-    background-color: rgb(34, 33, 33);
-    background-size: 80%;
+    scale: 1.1;
+    background-color: #25b79f;
+    background-size: 70%;
+    box-shadow: none;
 }
 .card:hover .content{
     transform: translateY(-5px);
@@ -307,9 +313,11 @@ hr{
 .content{
     visibility: hidden;
     color: white;
+    text-align: center;
     font-weight: bold;
     font-size: 20px;
     transform: translateY(150px);
+    margin: 1px auto 1px auto ;
     transition: all .3s ease-in-out;
 }
 
@@ -326,5 +334,12 @@ hr{
     text-transform: uppercase;
 }
 
-
+.footer h2{
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    color: #25b79f;
+    font-size: 40px;
+}
 
