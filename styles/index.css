@@ -275,7 +275,7 @@ hr{
     align-items: flex-end;
     overflow: hidden;   
     text-align: center;
-    background-image: url('/images/python.png');
+    background-image: url('../images/python.png');
     background-size:50%;
     background-repeat: no-repeat;
     border-radius: 5px 5px 5px 5px;
@@ -289,14 +289,14 @@ hr{
 
 
 .card:nth-child(3){
-    background-image: url('/images/java.png');
+    background-image: url('../images/java.png');
 }
 .card:nth-child(4){
-    background-image: url('/images/php.png');
+    background-image: url('../images/php.png');
 }
 
 .card:nth-child(5){
-    background-image: url('/images/html.png');
+    background-image: url('../images/html.png');
 }
 
 .card:hover{
