@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 html{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 nav a{
     font-size: 19px;
@@ -120,6 +120,10 @@ nav{
     text-align: center;
 }
 
+#long{
+    font-weight: 100;
+}
+
 .element .row{
     position: absolute;
     color: orange;
@@ -157,7 +161,7 @@ nav{
 
 .second>h2{
     width: 100%;
-    padding: 30px;
+    margin: 30px;
     text-align: center;
     font-size: 30px;
     color: #25b79f;
@@ -165,7 +169,7 @@ nav{
 
 #third-slide>h2{
     text-align: center;
-    padding: 30px;
+    margin: 30px;
     font-size: 30px;
     color:#25b79f;
 }
@@ -251,9 +255,8 @@ hr{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    align-content: space-evenly;
     flex-direction: row;
+    align-content: space-evenly;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -266,14 +269,13 @@ hr{
 
 
 .card{
-    height: 300px;
-    min-height: 300px;
+    height: 400px;
     max-width: 300px;
     flex: 1 0 300px;
     position: relative;
     display: flex;
     align-items: flex-end;
-    overflow: hidden;   
+    overflow: hidden;
     text-align: center;
     background-image: url('../images/python.png');
     background-size:50%;
@@ -301,7 +303,6 @@ hr{
 
 .card:hover{
     scale: 1.1;
-    background-color: #25b79f;
     background-size: 70%;
     box-shadow: none;
 }
@@ -328,6 +329,12 @@ hr{
     padding: 10px;
     border: 1px solid black;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover{
+    border: 1px solid #25b79f;
+    color: #25b79f;
 }
 
 .card .title{
@@ -335,11 +342,59 @@ hr{
 }
 
 .footer h2{
-    font-family: 'Dancing Script', cursive;
-    text-transform: uppercase;
     width: 100%;
     text-align: center;
     color: #25b79f;
     font-size: 40px;
+}
+.footer h3{
+    color: white;
+}
+.footer{
+    color: #25b79f;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer .footer_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.footer li{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: all .3s ease;
+}
+
+.footer li:hover{
+    color: white;
+}
+
+
+.reseaux_card{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card_contact{
+    justify-content: center;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto auto auto auto;
+    transition: all .2s ease-in;
+}
+
+.card_contact:hover{
+    box-shadow: 3px 3px 3px 3px rgb(46, 46, 46);
+}
+
+@media  screen and (max-width : 630px) {
+    .card{
+        height: 300px;
+    }
+    
 }
 
