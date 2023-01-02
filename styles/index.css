@@ -1,112 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap%27');
-*{
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    text-decoration: none;
-}
-html{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-nav a{
-    font-size: 19px;
-    position: relative;
-    color: white;
-    text-decoration: none;
-    padding: 10px 10px;
-}
-
-
-nav a::after{
-    position: absolute;
-    content: "";
-    bottom: -3px ;
-    left: 50%;
-    background-color: #25b79f;
-    width: 0;
-    height: 3px;
-    transition: all .25s ease-in-out;
-}
-
-nav a:hover::after{
-    width: 100%;
-    left: 0;
-    border-radius: 2px;
-}
-
-nav{
-    width: 100%;
-    position: fixed;
-    background-color: #090A0B;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-evenly; 
-    align-items: center;
-    text-transform: uppercase;
-    height: 64px;
-    top: 0;
-}
-.container{
-    margin-top: 64px;
-    height: calc(100vh - 64px);
-    width: 100%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-.element{
-    scroll-snap-align: start;
-    scroll-padding-inline-start: unset;
-    width: 100%;
-    min-height: 100%;
-    height: auto;
-    background-color: #090A0B;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.element>*{
-    visibility: hidden;
-}
-.element.is-visible > *{
-    animation: right .9s  ease;
-    visibility: visible;
-}
-
-.element.is-visible:nth-child(2)>*:not(.row){
-    animation: left .9s ease;
-}
-
-@keyframes moove {
-    0%{
-        bottom: 40px; 
-    }
-    50%{
-        bottom: 15px;
-    }
-    100%{
-        bottom: 40px;
-    }
-}
-
-@keyframes right {
-    0%{
-        transform: translate(-200%);
-    }
-    
-    100%{
-        transform: translate(0);
-    }
-}
-@keyframes left {
-    0%{
-        transform: translate(200%);
-    }
-    100%{
-        transform: translate(0);
-    }
-}
 
 .second{
     position: relative;
@@ -124,24 +15,6 @@ nav{
     font-weight: 100;
 }
 
-.element .row{
-    position: absolute;
-    color: orange;
-    bottom: 0;
-    font-size: 50px;
-    rotate: -90deg;
-    transform: calc(-50%,-50%);
-    animation: moove .7s infinite ;
-}
-
-
-.first{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    font-size: 375%;
-}
 
 .about{
     height: 1000px;
@@ -149,11 +22,6 @@ nav{
 }
 
 
-
-.row a{
-    color: #25b79f;
-    font-weight: 900;
-}
 
 .second .row a{
     color: #25b79f;
@@ -165,32 +33,6 @@ nav{
     text-align: center;
     font-size: 30px;
     color: #25b79f;
-}
-
-#third-slide>h2{
-    text-align: center;
-    margin: 30px;
-    font-size: 30px;
-    color:#25b79f;
-}
-#title_first h1{
-    font-family: 'Dancing Script', cursive;
-    text-transform: uppercase;
-}
-
-#title_first{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation:  right .9s ease-in-out;
-}
-
-
-#title_first p{
-    color: #25b79f;
-    font-size: 30px;
 }
 .about{
     display: flex;
@@ -341,67 +183,4 @@ hr{
     text-transform: uppercase;
 }
 
-.footer h2{
-    width: 100%;
-    text-align: center;
-    color: #25b79f;
-    font-size: 40px;
-}
-.footer h3{
-    color: white;
-}
-.footer{
-    color: #25b79f;
-    display: flex;
-    justify-content: space-evenly;
-}
-.footer .footer_nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-}
-
-.footer li{
-    padding-top: 8px;
-    padding-bottom: 8px;
-    transition: all .3s ease;
-}
-
-.footer li:hover{
-    color: white;
-}
-
-
-.reseaux_card{
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.card_contact{
-    justify-content: center;
-    border-radius: 5px 5px 5px 5px;
-    margin: auto auto auto auto;
-    transition: all .2s ease-in;
-}
-
-.card_contact:hover{
-    box-shadow: 3px 3px 3px 3px rgb(46, 46, 46);
-}
-
-@media  screen and (max-width : 630px) {
-    .card{
-        height: 300px;
-    }
-    
-}
-
-@media  screen and (max-width : 576px ) {
-    .footer .footer_nav{
-        display: block;
-        text-align: center;
-    }
-}
 

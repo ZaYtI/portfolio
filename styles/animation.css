@@ -1,0 +1,29 @@
+@keyframes moove {
+    0%{
+        bottom: 40px; 
+    }
+    50%{
+        bottom: 15px;
+    }
+    100%{
+        bottom: 40px;
+    }
+}
+
+@keyframes right {
+    0%{
+        transform: translate(-200%);
+    }
+    
+    100%{
+        transform: translate(0);
+    }
+}
+@keyframes left {
+    0%{
+        transform: translate(200%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}

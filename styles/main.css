@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap%27');
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.element{
+    scroll-snap-align: start;
+    scroll-padding-inline-start: unset;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background-color: #090A0B;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.element#last-slide{
+    flex-direction: column;
+}
+
+
+.element>*{
+    visibility: hidden;
+}
+.element.is-visible > *{
+    animation: right .9s  ease;
+    visibility: visible;
+}
+
+.element.is-visible:nth-child(2) > *:not(.row){
+    animation: left .9s  ease;
+}
+.element .row{
+    position: absolute;
+    color: orange;
+    bottom: 0;
+    font-size: 50px;
+    rotate: -90deg;
+    transform: calc(-50%,-50%);
+    animation: moove .7s infinite ;
+}
+#third-slide>h2{
+    text-align: center;
+    margin: 30px;
+    font-size: 30px;
+    color:#25b79f;
+}
+#title_first h1{
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+}
+
+#title_first{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation:  left .9s ease-in-out;
+}
+
+
+#title_first p{
+    color: #25b79f;
+    font-size: 30px;
+}
+
+.first{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 375%;
+}
+
+.row a{
+    color: #25b79f;
+    font-weight: 900;
+}
+
+.reseaux_card{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card_contact{
+    justify-content: center;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto auto auto auto;
+    transition: all .2s ease-in;
+}
+
+.card_contact:hover{
+    box-shadow: 3px 3px 3px 3px rgb(46, 46, 46);
+}
+
+h2{
+    margin: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #25b79f;
+}
