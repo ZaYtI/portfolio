@@ -13,6 +13,16 @@
 
 #long{
     font-weight: 100;
+    padding: 0 5rem 0 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    #long{
+        padding: 0 1rem 0 1rem;
+    }
+    .element{
+        padding-bottom: 200px;
+    }
 }
 
 
@@ -119,7 +129,7 @@ hr{
     align-items: flex-end;
     overflow: hidden;
     text-align: center;
-    background-image: url('../images/python.png');
+    background-image: url('../images/telephone-intelligent.png');
     background-size:50%;
     background-repeat: no-repeat;
     border-radius: 5px 5px 5px 5px;
@@ -147,6 +157,13 @@ hr{
     scale: 1.1;
     background-size: 70%;
     box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+    .card:hover{
+        scale: 1.05;
+        background-size: 55%;
+    }
 }
 .card:hover .content{
     transform: translateY(-5px);
@@ -182,5 +199,3 @@ hr{
 .card .title{
     text-transform: uppercase;
 }
-
-
